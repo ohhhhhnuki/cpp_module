@@ -6,6 +6,11 @@
 #include <iomanip>
 #include "Account.hpp"
 
+int Account::_nbAccounts = 0;
+int Account::_totalAmount = 0;
+int Account::_totalNbDeposits = 0;
+int Account::_totalNbWithdrawals = 0;
+
 Account::Account(int initial_deposit) {
 	this->_nbDeposits = 0;
 	this->_nbWithdrawals = 0;
@@ -57,7 +62,7 @@ bool Account::makeWithdrawal(int withdrawal) {
 			  << "p_amount:" << this->_amount << ";"
 			  << "withdrawal:" << withdrawal << ";"
 			  << "amount:" << this->_amount - withdrawal << ";"
-			  << "nb_withdrawals:" << this->_nbWithdrawals;
+			  << "nb_withdrawals:" << this->_nbWithdrawals << std::endl;
 	return true;
 }
 

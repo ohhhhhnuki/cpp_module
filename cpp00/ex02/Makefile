@@ -1,20 +1,20 @@
-NAME = bank
-SRCS = tests.cpp Account.cpp
-OBJS = $(SRCS:.cpp=.o)
-CXX = clang++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+NAME	:= accountList
+SRCS	:= tests.cpp Account.cpp
+OBJS	:= $(SRCS:.cpp=.o)
+CXX     := clang++
+CXXFLAGS:= -Wall -Wextra -Werror -std=c++98
 
-all : $(NAME)
+all     : 	$(NAME)
 
-$(NAME) : $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+$(NAME) : 	$(OBJS)
+			$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
-clean :
-	$(RM) $(OBJS)
+clean	:
+			$(RM) $(OBJS)
 
-fclean : clean
-	$(RM) $(NAME)
+fclean	:	clean
+			$(RM) $(NAME)
 
-re : fclean all
+re		:	fclean all
 
-.PHONY : all clean fclean re
+.PHONY	:	all clean fclean re
