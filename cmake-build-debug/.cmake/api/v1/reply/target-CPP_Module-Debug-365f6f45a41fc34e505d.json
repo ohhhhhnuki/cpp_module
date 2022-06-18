@@ -108,7 +108,8 @@
 				12,
 				14,
 				15,
-				17
+				17,
+				18
 			]
 		}
 	],
@@ -153,7 +154,8 @@
 				12,
 				14,
 				15,
-				17
+				17,
+				18
 			]
 		},
 		{
@@ -271,6 +273,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "cpp01/ex01/zombieHorde.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "cpp01/ex02/main.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
