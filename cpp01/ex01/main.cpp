@@ -9,10 +9,11 @@ int main(void) {
 	std::cout << "input ZombieNum > ";
 	std::cin >> zonbieNum;
 
-	Zombie* zombiePtr = zonbieHorde(zonbieNum, "ohnuki");
+	Zombie* zombiePtr = zombieHorde(zonbieNum, "ohnuki");
 
 	for (int i = 0; i < zonbieNum; i++)
 		zombiePtr[i].announce();
 
-//	delete [] zombiePtr;
+	for (int i = 0; i < zonbieNum; i++)
+		delete &zombiePtr[i];
 }

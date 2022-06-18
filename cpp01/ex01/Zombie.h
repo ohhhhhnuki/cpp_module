@@ -19,7 +19,7 @@ public:
 	void setName(std::string name);
 };
 
-Zombie *zonbieHorde(int N, std::string name);
+Zombie* zombieHorde(int N, std::string name);
 
 
 #endif
