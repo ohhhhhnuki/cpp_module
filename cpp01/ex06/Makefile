@@ -1,5 +1,5 @@
-NAME = Harl2.0
-SRCS = main.cpp Harl.cpp
+NAME = harlFilter
+SRCS = Harl.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 CXX = clang++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
@@ -18,3 +18,4 @@ fclean : clean
 re : fclean all
 
 .PHONY : all clean fclean re
+
