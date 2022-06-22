@@ -1,4 +1,4 @@
-NAME = canonicalForm
+NAME = ex00
 SRCS = Fixed.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 CXX = clang++
