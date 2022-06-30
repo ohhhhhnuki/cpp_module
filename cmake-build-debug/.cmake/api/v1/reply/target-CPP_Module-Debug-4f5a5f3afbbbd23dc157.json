@@ -122,7 +122,9 @@
 				33,
 				35,
 				36,
-				38
+				38,
+				39,
+				40
 			]
 		}
 	],
@@ -181,7 +183,9 @@
 				33,
 				35,
 				36,
-				38
+				38,
+				39,
+				40
 			]
 		},
 		{
@@ -199,7 +203,8 @@
 				28,
 				31,
 				34,
-				37
+				37,
+				41
 			]
 		}
 	],
@@ -426,6 +431,23 @@
 			"compileGroupIndex" : 0,
 			"path" : "cpp02/ex01/main.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "cpp02/ex02/main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "cpp02/ex02/Fixed.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "cpp02/ex02/Fixed.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"
