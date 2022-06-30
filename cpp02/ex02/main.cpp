@@ -1,7 +1,9 @@
 //
 // Created by 大貫　弘貴 on 2022/06/30.
 //
+#include "Fixed.h"
 #include <iostream>
+
 int main( void ) {
 	Fixed a;
 	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
