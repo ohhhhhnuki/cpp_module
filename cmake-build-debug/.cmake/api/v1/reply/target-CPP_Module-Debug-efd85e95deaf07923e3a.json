@@ -132,7 +132,12 @@
 				49,
 				50,
 				51,
-				53
+				53,
+				55,
+				57,
+				59,
+				61,
+				63
 			]
 		}
 	],
@@ -201,7 +206,12 @@
 				49,
 				50,
 				51,
-				53
+				53,
+				55,
+				57,
+				59,
+				61,
+				63
 			]
 		},
 		{
@@ -225,7 +235,11 @@
 				46,
 				48,
 				52,
-				54
+				54,
+				56,
+				58,
+				60,
+				62
 			]
 		}
 	],
@@ -542,6 +556,56 @@
 			"backtrace" : 1,
 			"path" : "cpp03/ex02/FragTrap.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "cpp03/ex03/DiamondTrap.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "cpp03/ex03/DiamondTrap.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "cpp03/ex03/ClapTrap.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "cpp03/ex03/ClapTrap.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "cpp03/ex03/ScavTrap.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "cpp03/ex03/ScavTrap.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "cpp03/ex03/FragTrap.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "cpp03/ex03/FragTrap.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "cpp03/ex03/main.cpp",
+			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "EXECUTABLE"
