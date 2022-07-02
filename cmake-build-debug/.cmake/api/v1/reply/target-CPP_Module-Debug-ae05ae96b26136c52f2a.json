@@ -297,7 +297,9 @@
 				94,
 				96,
 				98,
-				100
+				100,
+				102,
+				103
 			]
 		}
 	],
@@ -391,7 +393,9 @@
 				94,
 				96,
 				98,
-				100
+				100,
+				102,
+				103
 			]
 		},
 		{
@@ -437,7 +441,8 @@
 				95,
 				97,
 				99,
-				101
+				101,
+				104
 			]
 		}
 	],
@@ -1013,6 +1018,23 @@
 		{
 			"backtrace" : 1,
 			"path" : "cpp04/ex03/MateriaSource.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "cpp05/ex00/main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "cpp05/ex00/Bureaucrat.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "cpp05/ex00/Bureaucrat.h",
 			"sourceGroupIndex" : 1
 		}
 	],
