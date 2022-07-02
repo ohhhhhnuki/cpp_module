@@ -4,7 +4,11 @@
 #include <iostream>
 #include "AMateria.h"
 #include "ICharacter.h"
+#include "Character.h"
 #include "IMateriaSource.h"
+#include "MateriaSource.h"
+#include "Ice.h"
+#include "Cure.h"
 
 int main() {
 	IMateriaSource* src = new MateriaSource();

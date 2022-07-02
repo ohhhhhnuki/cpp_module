@@ -7,6 +7,20 @@ include_directories(cpp00/ex01)
 include_directories(cpp00/ex02)
 include_directories(cpp01/ex00)
 include_directories(cpp01/ex01)
+include_directories(cpp01/ex03)
+include_directories(cpp01/ex05)
+include_directories(cpp01/ex06)
+include_directories(cpp02/ex00)
+include_directories(cpp02/ex01)
+include_directories(cpp02/ex02)
+include_directories(cpp03/ex00)
+include_directories(cpp03/ex01)
+include_directories(cpp03/ex02)
+include_directories(cpp03/ex03)
+include_directories(cpp04/ex00)
+include_directories(cpp04/ex01)
+include_directories(cpp04/ex02)
+include_directories(cpp04/ex03)
 
 add_executable(CPP_Module
         cpp00/ex00/magaphone.cpp
@@ -26,4 +40,80 @@ add_executable(CPP_Module
         cpp01/ex01/main.cpp
         cpp01/ex01/Zombie.cpp
         cpp01/ex01/Zombie.h
-        cpp01/ex01/zombieHorde.cpp cpp01/ex02/main.cpp cpp01/ex03/Weapon.cpp cpp01/ex03/Weapon.h cpp01/ex03/main.cpp cpp01/ex03/HumanA.cpp cpp01/ex03/HumanA.h cpp01/ex03/HumanB.cpp cpp01/ex03/HumanB.h cpp01/ex04/main.cpp cpp01/ex05/Harl.cpp cpp01/ex05/Harl.h cpp01/ex05/main.cpp cpp01/ex06/Harl.cpp cpp01/ex06/Harl.h cpp01/ex06/main.cpp cpp02/ex00/Fixed.cpp cpp02/ex00/Fixed.h cpp02/ex00/main.cpp cpp02/ex01/Fixed.cpp cpp02/ex01/Fixed.h cpp02/ex01/main.cpp cpp02/ex02/main.cpp cpp02/ex02/Fixed.cpp cpp02/ex02/Fixed.h cpp03/ex00/ClapTrap.cpp cpp03/ex00/ClapTrap.h cpp03/ex00/main.cpp cpp03/ex01/ClapTrap.cpp cpp03/ex01/ClapTrap.h cpp03/ex01/ScavTrap.cpp cpp03/ex01/ScavTrap.h cpp03/ex01/main.cpp cpp03/ex02/main.cpp cpp03/ex02/ClapTrap.cpp cpp03/ex02/ClapTrap.h cpp03/ex02/FragTrap.cpp cpp03/ex02/FragTrap.h cpp03/ex03/DiamondTrap.cpp cpp03/ex03/DiamondTrap.h cpp03/ex03/ClapTrap.cpp cpp03/ex03/ClapTrap.h cpp03/ex03/ScavTrap.cpp cpp03/ex03/ScavTrap.h cpp03/ex03/FragTrap.cpp cpp03/ex03/FragTrap.h cpp03/ex03/main.cpp cpp04/ex00/main.cpp cpp04/ex00/Animal.cpp cpp04/ex00/Animal.h cpp04/ex00/Dog.cpp cpp04/ex00/Dog.h cpp04/ex00/Cat.cpp cpp04/ex00/Cat.h cpp04/ex01/main.cpp cpp04/ex01/Brain.cpp cpp04/ex01/Brain.h cpp04/ex03/main.cpp cpp04/ex03/AMateria.cpp cpp04/ex03/AMateria.h cpp04/ex03/ICharacter.h cpp04/ex03/IMateriaSource.h)
+        cpp01/ex01/zombieHorde.cpp
+        cpp01/ex02/main.cpp
+        cpp01/ex03/HumanA.cpp
+        cpp01/ex03/HumanA.h
+        cpp01/ex03/HumanB.cpp
+        cpp01/ex03/HumanB.h
+        cpp01/ex03/main.cpp
+        cpp01/ex03/Weapon.cpp
+        cpp01/ex03/Weapon.h
+        cpp01/ex04/main.cpp
+        cpp01/ex05/Harl.cpp
+        cpp01/ex05/Harl.h
+        cpp01/ex05/main.cpp
+        cpp01/ex06/Harl.cpp
+        cpp01/ex06/Harl.h
+        cpp01/ex06/main.cpp
+        cpp02/ex00/Fixed.cpp
+        cpp02/ex00/Fixed.h
+        cpp02/ex00/main.cpp
+        cpp02/ex01/Fixed.cpp
+        cpp02/ex01/Fixed.h
+        cpp02/ex01/main.cpp
+        cpp02/ex02/Fixed.cpp
+        cpp02/ex02/Fixed.h
+        cpp02/ex02/main.cpp
+        cpp03/ex00/ClapTrap.cpp
+        cpp03/ex00/ClapTrap.h
+        cpp03/ex00/main.cpp
+        cpp03/ex01/ClapTrap.cpp
+        cpp03/ex01/ClapTrap.h
+        cpp03/ex01/main.cpp
+        cpp03/ex01/ScavTrap.cpp
+        cpp03/ex01/ScavTrap.h
+        cpp03/ex02/ClapTrap.cpp
+        cpp03/ex02/ClapTrap.h
+        cpp03/ex02/FragTrap.cpp
+        cpp03/ex02/FragTrap.h
+        cpp03/ex02/main.cpp
+        cpp03/ex03/ClapTrap.cpp
+        cpp03/ex03/ClapTrap.h
+        cpp03/ex03/DiamondTrap.cpp
+        cpp03/ex03/DiamondTrap.h
+        cpp03/ex03/FragTrap.cpp
+        cpp03/ex03/FragTrap.h
+        cpp03/ex03/main.cpp
+        cpp03/ex03/ScavTrap.cpp
+        cpp03/ex03/ScavTrap.h
+        cpp04/ex00/Animal.cpp
+        cpp04/ex00/Animal.h
+        cpp04/ex00/Cat.cpp
+        cpp04/ex00/Cat.h
+        cpp04/ex00/Dog.cpp
+        cpp04/ex00/Dog.h
+        cpp04/ex00/main.cpp
+        cpp04/ex01/Animal.cpp
+        cpp04/ex01/Animal.h
+        cpp04/ex01/Brain.cpp
+        cpp04/ex01/Brain.h
+        cpp04/ex01/Cat.cpp
+        cpp04/ex01/Cat.h
+        cpp04/ex01/Dog.cpp
+        cpp04/ex01/Dog.h
+        cpp04/ex01/main.cpp
+        cpp04/ex02/Animal.cpp
+        cpp04/ex02/Animal.h
+        cpp04/ex02/Brain.cpp
+        cpp04/ex02/Brain.h
+        cpp04/ex02/Cat.cpp
+        cpp04/ex02/Cat.h
+        cpp04/ex02/Dog.cpp
+        cpp04/ex02/Dog.h
+        cpp04/ex02/main.cpp
+        cpp04/ex03/AMateria.cpp
+        cpp04/ex03/AMateria.h
+        cpp04/ex03/ICharacter.h
+        cpp04/ex03/IMateriaSource.h
+        cpp04/ex03/main.cpp cpp04/ex03/Ice.cpp cpp04/ex03/Ice.h cpp04/ex03/Cure.cpp cpp04/ex03/Cure.h cpp04/ex03/Character.cpp cpp04/ex03/Character.h cpp04/ex03/MateriaSource.cpp cpp04/ex03/MateriaSource.h)

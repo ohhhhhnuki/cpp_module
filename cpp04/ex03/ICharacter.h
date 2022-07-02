@@ -2,11 +2,12 @@
 // Created by 大貫　弘貴 on 2022/07/02.
 //
 
-#ifndef CPP_MODULE_ICHARACTER_H
-#define CPP_MODULE_ICHARACTER_H
+#ifndef ICHARACTER_H
+#define ICHARACTER_H
 
 #include <iostream>
-#include "AMateria.h"
+
+class AMateria;
 
 class ICharacter {
 public:
@@ -18,4 +19,4 @@ public:
 };
 
 
-#endif //CPP_MODULE_ICHARACTER_H
+#endif
