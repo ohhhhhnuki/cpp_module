@@ -5,9 +5,19 @@
 #ifndef CPP_MODULE_PRESIDENTIALPARDONFORM_H
 #define CPP_MODULE_PRESIDENTIALPARDONFORM_H
 
+#include <iostream>
+#include "Bureaucrat.h"
+#include "Form.h"
 
-class PresidentialPardonForm {
+class PresidentialPardonForm : public Form{
+private:
+	int pSignableScore;
+	int pExecutableScore;
 
+public:
+	PresidentialPardonForm(std::string target);
+	~PresidentialPardonForm();
+	void execute(Bureaucrat const & executor) const;
 };
 
 

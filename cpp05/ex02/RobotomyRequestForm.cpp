@@ -6,6 +6,8 @@
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form(target, 72, 45){
 	std::cout << "RobotomyRequestForm constructor called." << std::endl;
+	this->rSignableScore = 72;
+	this->rExecutableScore = 45;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm() {
@@ -13,6 +15,8 @@ RobotomyRequestForm::~RobotomyRequestForm() {
 }
 
 void RobotomyRequestForm::execute(const Bureaucrat &executor) const {
+	(void)executor;
+
 	std::cout << "Gaaaaaaaaaaaa..." << std::endl;
 
 	srand(time(NULL));

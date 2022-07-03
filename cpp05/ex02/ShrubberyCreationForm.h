@@ -10,8 +10,8 @@
 
 class ShrubberyCreationForm : public Form {
 private:
-	int const sSignableGrade = 145;
-	int const sExecutableGrade = 137;
+	int sSignableGrade;
+	int sExecutableGrade;
 
 public:
 	ShrubberyCreationForm(std::string target);

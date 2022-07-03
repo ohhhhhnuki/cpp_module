@@ -11,8 +11,8 @@
 
 class RobotomyRequestForm : public Form{
 private:
-	const int rSignableScore = 72;
-	const int rExecutableScore = 45;
+	int rSignableScore;
+	int rExecutableScore;
 
 public:
 	RobotomyRequestForm(std::string target);
