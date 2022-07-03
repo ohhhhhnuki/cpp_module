@@ -6,7 +6,8 @@
 #define CPP_MODULE_BUREAUCRAT_H
 
 #include <iostream>
-#include "Form.h"
+
+class Form;
 
 class Bureaucrat {
 private:
@@ -19,7 +20,7 @@ public:
 	~Bureaucrat();
 	std::string getName();
 	int getGrade();
-	void signForm();
+	void signForm(Form form);
 };
 
 class GradeTooHighException : public std::exception {};

@@ -3,6 +3,7 @@
 //
 
 #include "Bureaucrat.h"
+#include "Form.h"
 
 Bureaucrat::Bureaucrat() {
 	std::cout << "Bureaucrat default constructor called." << std::endl;
@@ -29,5 +30,6 @@ int Bureaucrat::getGrade() {
 	return this->grade;
 }
 
-void Bureaucrat::signForm() {
+void Bureaucrat::signForm(Form form) {
+	std::cout << this->name << " signed " << form.getName() << std::endl;
 }
