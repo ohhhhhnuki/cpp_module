@@ -1,0 +1,14 @@
+//
+// Created by 大貫　弘貴 on 2022/07/04.
+//
+
+#ifndef CPP_MODULE_PRESIDENTIALPARDONFORM_H
+#define CPP_MODULE_PRESIDENTIALPARDONFORM_H
+
+
+class PresidentialPardonForm {
+
+};
+
+
+#endif //CPP_MODULE_PRESIDENTIALPARDONFORM_H
