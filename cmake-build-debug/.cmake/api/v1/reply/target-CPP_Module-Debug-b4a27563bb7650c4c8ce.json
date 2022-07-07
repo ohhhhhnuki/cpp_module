@@ -310,7 +310,8 @@
 				117,
 				119,
 				121,
-				123
+				123,
+				124
 			]
 		}
 	],
@@ -417,7 +418,8 @@
 				117,
 				119,
 				121,
-				123
+				123,
+				124
 			]
 		},
 		{
@@ -1171,6 +1173,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "cpp05/ex03/main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "cpp06/ex00/main.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
