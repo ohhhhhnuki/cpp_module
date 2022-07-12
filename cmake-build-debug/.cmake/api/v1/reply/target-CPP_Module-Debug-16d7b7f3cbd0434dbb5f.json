@@ -311,7 +311,9 @@
 				119,
 				121,
 				123,
-				124
+				124,
+				125,
+				126
 			]
 		}
 	],
@@ -419,7 +421,9 @@
 				119,
 				121,
 				123,
-				124
+				124,
+				125,
+				126
 			]
 		},
 		{
@@ -474,7 +478,8 @@
 				115,
 				118,
 				120,
-				122
+				122,
+				127
 			]
 		}
 	],
@@ -1180,6 +1185,23 @@
 			"compileGroupIndex" : 0,
 			"path" : "cpp06/ex00/main.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "cpp06/ex01/main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "cpp06/ex01/Data.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "cpp06/ex01/Data.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"
