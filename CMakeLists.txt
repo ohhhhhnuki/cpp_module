@@ -21,6 +21,13 @@ include_directories(cpp04/ex00)
 include_directories(cpp04/ex01)
 include_directories(cpp04/ex02)
 include_directories(cpp04/ex03)
+include_directories(cpp05/ex00)
+include_directories(cpp05/ex01)
+include_directories(cpp05/ex02)
+include_directories(cpp05/ex03)
+include_directories(cpp06/ex01)
+include_directories(cpp06/ex02)
+include_directories(cpp07/ex00)
 
 add_executable(CPP_Module
         cpp00/ex00/magaphone.cpp
@@ -114,6 +121,55 @@ add_executable(CPP_Module
         cpp04/ex02/main.cpp
         cpp04/ex03/AMateria.cpp
         cpp04/ex03/AMateria.h
+        cpp04/ex03/Character.cpp
+        cpp04/ex03/Character.h
+        cpp04/ex03/Cure.cpp
+        cpp04/ex03/Cure.h
+        cpp04/ex03/Ice.cpp
+        cpp04/ex03/Ice.h
         cpp04/ex03/ICharacter.h
         cpp04/ex03/IMateriaSource.h
-        cpp04/ex03/main.cpp cpp04/ex03/Ice.cpp cpp04/ex03/Ice.h cpp04/ex03/Cure.cpp cpp04/ex03/Cure.h cpp04/ex03/Character.cpp cpp04/ex03/Character.h cpp04/ex03/MateriaSource.cpp cpp04/ex03/MateriaSource.h cpp05/ex00/main.cpp cpp05/ex00/Bureaucrat.cpp cpp05/ex00/Bureaucrat.h cpp05/ex01/main.cpp cpp05/ex01/Form.cpp cpp05/ex01/Form.h cpp05/ex01/Bureaucrat.cpp cpp05/ex01/Bureaucrat.h cpp05/ex02/ShrubberyCreationForm.cpp cpp05/ex02/ShrubberyCreationForm.h cpp05/ex02/RobotomyRequestForm.cpp cpp05/ex02/RobotomyRequestForm.h cpp05/ex02/PresidentialPardonForm.cpp cpp05/ex02/PresidentialPardonForm.h cpp05/ex02/main.cpp cpp05/ex02/Form.cpp cpp05/ex02/Form.h cpp05/ex02/Bureaucrat.cpp cpp05/ex02/Bureaucrat.h cpp05/ex03/Intern.cpp cpp05/ex03/Intern.h cpp05/ex03/main.cpp cpp06/ex00/main.cpp cpp06/ex01/main.cpp cpp06/ex01/Data.cpp cpp06/ex01/Data.h cpp06/ex02/main.cpp cpp06/ex02/Base.cpp cpp06/ex02/Base.h cpp06/ex02/A.h cpp06/ex02/B.h cpp06/ex02/C.h cpp07/ex00/whatever.h cpp07/ex00/main.cpp practice/List9-1.cpp cpp07/ex00/test.cpp cpp07/ex00/test.h)
+        cpp04/ex03/main.cpp
+        cpp04/ex03/MateriaSource.cpp
+        cpp04/ex03/MateriaSource.h
+        cpp05/ex00/Bureaucrat.cpp
+        cpp05/ex00/Bureaucrat.h
+        cpp05/ex00/main.cpp
+        cpp05/ex01/Bureaucrat.cpp
+        cpp05/ex01/Bureaucrat.h
+        cpp05/ex01/Form.cpp
+        cpp05/ex01/Form.h
+        cpp05/ex01/main.cpp
+        cpp05/ex02/Bureaucrat.cpp
+        cpp05/ex02/Bureaucrat.h
+        cpp05/ex02/Form.cpp
+        cpp05/ex02/Form.h
+        cpp05/ex02/main.cpp
+        cpp05/ex02/PresidentialPardonForm.cpp
+        cpp05/ex02/PresidentialPardonForm.h
+        cpp05/ex02/RobotomyRequestForm.cpp
+        cpp05/ex02/RobotomyRequestForm.h
+        cpp05/ex02/ShrubberyCreationForm.cpp
+        cpp05/ex02/ShrubberyCreationForm.h
+        cpp05/ex03/Bureaucrat.cpp
+        cpp05/ex03/Bureaucrat.h
+        cpp05/ex03/Form.cpp
+        cpp05/ex03/Form.h
+        cpp05/ex03/Intern.cpp
+        cpp05/ex03/Intern.h
+        cpp05/ex03/main.cpp
+        cpp05/ex03/RobotomyRequestForm.cpp
+        cpp05/ex03/RobotomyRequestForm.h
+        cpp06/ex00/main.cpp
+        cpp06/ex01/Data.cpp
+        cpp06/ex01/Data.h
+        cpp06/ex01/main.cpp
+        cpp06/ex02/A.h
+        cpp06/ex02/B.h
+        cpp06/ex02/Base.cpp
+        cpp06/ex02/Base.h
+        cpp06/ex02/C.h
+        cpp06/ex02/main.cpp
+        cpp07/ex00/main.cpp
+        cpp07/ex00/whatever.h
+        cpp07/ex01/main.cpp cpp07/ex01/iter.h)
