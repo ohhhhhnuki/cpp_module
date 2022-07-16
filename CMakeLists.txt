@@ -172,4 +172,4 @@ add_executable(CPP_Module
         cpp06/ex02/main.cpp
         cpp07/ex00/main.cpp
         cpp07/ex00/whatever.h
-        cpp07/ex01/main.cpp cpp07/ex01/iter.h cpp07/ex02/Array.cpp cpp07/ex02/Array.h cpp07/ex02/main.cpp)
+        cpp07/ex01/main.cpp cpp07/ex01/iter.h cpp07/ex02/Array.cpp cpp07/ex02/Array.h cpp07/ex02/main.cpp cpp08/ex00/main.cpp cpp08/ex00/easyfind.h)
