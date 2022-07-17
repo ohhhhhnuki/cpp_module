@@ -30,7 +30,6 @@ include_directories(cpp06/ex02)
 include_directories(cpp07/ex00)
 
 add_executable(CPP_Module
-        cpp00/ex00/magaphone.cpp
         cpp00/ex01/Contact.cpp
         cpp00/ex01/Contact.hpp
         cpp00/ex01/main.cpp
@@ -172,4 +171,4 @@ add_executable(CPP_Module
         cpp06/ex02/main.cpp
         cpp07/ex00/main.cpp
         cpp07/ex00/whatever.h
-        cpp07/ex01/main.cpp cpp07/ex01/iter.h cpp07/ex02/Array.cpp cpp07/ex02/Array.h cpp07/ex02/main.cpp cpp08/ex00/main.cpp cpp08/ex00/easyfind.h cpp08/ex01/Span.cpp cpp08/ex01/Span.h cpp08/ex01/main.cpp)
+        cpp07/ex01/main.cpp cpp07/ex01/iter.h cpp07/ex02/Array.cpp cpp07/ex02/Array.h cpp07/ex02/main.cpp cpp08/ex00/main.cpp cpp08/ex00/easyfind.h cpp08/ex01/Span.cpp cpp08/ex01/Span.h cpp08/ex01/main.cpp cpp00/ex00/megaphone.cpp)

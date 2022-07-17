@@ -1,9 +1,20 @@
-gcc_options		=	-std=c++17 -Wall -Werror -Wextra
+NAME = megaphone
+SRCS = megaphone.cpp
+OBJS = $(SRCS:.cpp=.o)
+CXX = clang++
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
-magaphone	:	magaphone.cpp
-	clang++ $(gcc_options) $< -o $@
+all : $(NAME)
 
-clean		:
-	rm -r ./magaphone
+$(NAME) : $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
-.PHONY		:	magaphone clean
+clean :
+	$(RM) $(OBJS)
+
+fclean : clean
+	$(RM) $(NAME)
+
+re : fclean all
+
+.PHONY : all clean fclean
