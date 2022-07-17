@@ -7,10 +7,11 @@ int main(void) {
 	PhoneBook phoneBook;
 	int instructionNumber;
 
-	std::cout << "input instruction (1.ADD, 2.SEARCH, 3.EXIT) >";
-	std::cin >> instructionNumber;
-
 	while (true) {
+		std::cout << std::endl << "****************[menu]****************" << std::endl;
+		std::cout << "input instruction (1.ADD, 2.SEARCH, 3.EXIT, (4.VIEW)) > ";
+		std::cin >> instructionNumber;
+
 		switch (instructionNumber) {
 			case 1 : {
 				phoneBook.executeAdd();
@@ -20,11 +21,14 @@ int main(void) {
 				phoneBook.executeSearch();
 				break;
 			}
-			case 3 : {
+			case 3 :
 				exit(0);
+			case 4 : {
+				phoneBook.executeShowList();
+				break;
 			}
 			default : {
-				std::cout << "invalid input!";
+				std::cout << "invalid input!" << std::endl;
 			}
 		}
 	}

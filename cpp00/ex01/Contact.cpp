@@ -4,27 +4,27 @@
 
 #include "Contact.hpp"
 
-Contact::Contact() {}
-
-Contact::Contact(std::string firstName, std::string lastName, std::string nickName, bool darkestSecret) {
-	this->firstName = firstName;
-	this->lastName = lastName;
-	this->nickName = nickName;
-	this->darkestSecret = darkestSecret;
+Contact::Contact() {
+	std::cout << "[Contact] default constructor called" << std::endl;
 }
 
-std::string Contact::getFirstName() {
-	return this->firstName;
+Contact::Contact(std::string firstName, std::string lastName, std::string nickName, std::string darkestSecret)
+				: firstName(firstName), lastName(lastName), nickName(nickName), darkestSecret(darkestSecret) {
+	std::cout << "[Contact] constructor called." << std::endl;
 }
 
-std::string Contact::getLastName() {
-	return this->lastName;
+Contact::~Contact() {
+	std::cout << "[Contact] destructor called." << std::endl;
 }
 
-std::string Contact::getNickName() {
-	return this->nickName;
+const std::string &Contact::getFirstName() const {
+	return firstName;
 }
 
-//bool Contact::isDarkestSecret() {
-//	return darkestSecret;
-//}
+const std::string &Contact::getLastName() const {
+	return lastName;
+}
+
+const std::string &Contact::getNickName() const {
+	return nickName;
+}

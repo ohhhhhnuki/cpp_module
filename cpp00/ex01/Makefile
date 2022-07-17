@@ -1,29 +1,20 @@
-NAME=phonebook
-SRCDIR=.
-SOURCES = $(MAIN_SOURCE) $(SUB_SOURCES)
-MAIN_SOURCE = main.cpp
-SUB_SOURCES  =	PhoneBook.cpp Contact.cpp
+NAME = ex01
+SRCS = main.cpp Contact.cpp PhoneBook.cpp
+OBJS = $(SRCS:.cpp=.o)
+CXX = clang++
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
-OBJS  = $(SOURCES:.cpp=.o)
-SUB_OBJS =$(SUB_SOURCES:.cpp=.o)
+all : $(NAME)
 
-CC = clang++
-CFLAGS		= -std=c++98 -pedantic -Wall -Wextra -Werror
+$(NAME) : $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
-.PHONY: all clean fclean re test
-
-all: $(NAME)
-
-$(NAME): $(OBJS)
-	$(CC) -o $(NAME) $(OBJS)
-
-.cpp.o:
-	$(CC) $(CFLAGS) -o $@ -c $*.cpp
-
-clean:
+clean :
 	$(RM) $(OBJS)
 
-fclean:clean
+fclean : clean
 	$(RM) $(NAME)
 
-re:fclean all
+re : fclean all
+
+.PHONY : all clean fclean
