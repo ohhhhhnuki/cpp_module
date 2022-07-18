@@ -1,4 +1,4 @@
-NAME = sifl
+NAME = ex04
 SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 CXX = clang++
