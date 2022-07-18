@@ -1,4 +1,4 @@
-NAME = brain
+NAME = ex02
 SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 CXX = clang++
