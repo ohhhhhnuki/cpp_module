@@ -39,8 +39,6 @@ add_executable(CPP_Module
         cpp00/ex02/Account.hpp
         cpp00/ex02/tests.cpp
         cpp01/ex00/main.cpp
-        cpp01/ex00/newZombie.cpp
-        cpp01/ex00/randomChump.cpp
         cpp01/ex00/Zombie.cpp
         cpp01/ex00/Zombie.h
         cpp01/ex01/main.cpp

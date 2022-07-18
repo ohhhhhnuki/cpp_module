@@ -4,14 +4,27 @@
 
 #include "Zombie.h"
 
-Zombie::Zombie(std::string name) {
-	this->name = name;
+Zombie::Zombie() : name("default"){
+	std::cout << "[Zombie] default constructor called." << std::endl;
+}
+
+Zombie::Zombie(std::string name) : name(name) {
+	std::cout << "[Zombie] constructor called." << std::endl;
 }
 
 Zombie::~Zombie() {
-	std::cout << this->name << "is delete." << std::endl;
+	std::cout << name << " is delete." << std::endl;
 }
 
 void Zombie::announce() {
 	std::cout << name << ":" << "BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+Zombie* newZonbie(std::string name) {
+	return new Zombie(name);
+}
+
+void randomChump(std::string name) {
+	Zombie zombie(name);
+	zombie.announce();
 }
