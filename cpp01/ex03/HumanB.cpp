@@ -4,14 +4,19 @@
 
 #include "HumanB.h"
 
-HumanB::HumanB(std::string name) {
-	this->name = name;
+HumanB::HumanB(std::string name) : name(name), weapon(NULL) {
+	std::cout << "[HumanB] constructor called." << std::endl;
 }
 
-void HumanB::setWeapon(Weapon weapon) {
-	this->weapon = weapon;
+HumanB::~HumanB() {
+	std::cout << "[HumanB] destructor called." << std::endl;
+}
+
+void HumanB::setWeapon(Weapon& weapon) {
+	this->weapon = &weapon;
 }
 
 void HumanB::attack() {
-	std::cout << this->name << " attacks with their " << this->weapon.getType() << std::endl;
+	std::cout << name << " attacks with their " << weapon->getType() << std::endl;
 }
+

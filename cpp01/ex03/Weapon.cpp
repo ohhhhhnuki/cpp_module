@@ -4,16 +4,23 @@
 
 #include "Weapon.h"
 
-Weapon::Weapon(std::string type) {
+Weapon::Weapon(std::string type) : type(type) {
+	std::cout << "[Weapon] constructor called." << std::endl;
+}
+
+Weapon::Weapon() {
+	std::cout << "[Weapon] default constructor called." << std::endl;
+}
+
+Weapon::~Weapon() {
+	std::cout << "[Weapon] destructor called." << std::endl;
+}
+
+const std::string &Weapon::getType() const {
+	return type;
+}
+
+void Weapon::setType(const std::string &type) {
 	this->type = type;
 }
 
-Weapon::Weapon() {}
-
-void Weapon::setType(std::string type) {
-	this->type = type;
-}
-
-std::string Weapon::getType() {
-	return this->type;
-}

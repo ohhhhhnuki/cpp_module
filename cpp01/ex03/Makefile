@@ -1,4 +1,4 @@
-NAME = weapon
+NAME = ex03
 SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 OBJS = $(SRCS:.cpp=.o)
 CXX = clang++
