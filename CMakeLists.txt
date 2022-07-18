@@ -44,7 +44,6 @@ add_executable(CPP_Module
         cpp01/ex01/main.cpp
         cpp01/ex01/Zombie.cpp
         cpp01/ex01/Zombie.h
-        cpp01/ex01/zombieHorde.cpp
         cpp01/ex02/main.cpp
         cpp01/ex03/HumanA.cpp
         cpp01/ex03/HumanA.h

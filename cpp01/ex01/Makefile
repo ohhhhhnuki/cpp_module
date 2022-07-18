@@ -1,5 +1,5 @@
-NAME = zombieHorde
-SRCS = Zombie.cpp zombieHorde.cpp main.cpp
+NAME = ex01
+SRCS = Zombie.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
