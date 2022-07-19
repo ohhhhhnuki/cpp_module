@@ -5,10 +5,10 @@
 #include "Harl.h"
 
 Harl::Harl() {
-	this->complains[0] = &Harl::debug;
-	this->complains[1] = &Harl::info;
-	this->complains[2] = &Harl::warning;
-	this->complains[3] = &Harl::error;
+	complains[0] = &Harl::debug;
+	complains[1] = &Harl::info;
+	complains[2] = &Harl::warning;
+	complains[3] = &Harl::error;
 	std::cout << "[Harl] constructor called." << std::endl;
 }
 
