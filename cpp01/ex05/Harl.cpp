@@ -9,11 +9,16 @@ Harl::Harl() {
 	this->complains[1] = &Harl::info;
 	this->complains[2] = &Harl::warning;
 	this->complains[3] = &Harl::error;
+	std::cout << "[Harl] constructor called." << std::endl;
+}
+
+Harl::~Harl() {
+	std::cout << "[Harl] destructor called." << std::endl;
 }
 
 void Harl::complain( std::string level )
 {
-	int index = (level == "DEBUG") + (level == "INFO") * 2 + (level == "WARNING") * 3 + (level == "ERROR") * 4;
+	int index = (level == "DEBUG") + (level == "INFO") * 2 + (level == "WARNING") * 3 + (level == "ERROR") * 4 - 1;
 
 	(this->*complains[index])();
 }

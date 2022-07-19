@@ -1,4 +1,4 @@
-NAME = Harl2.0
+NAME = ex05
 SRCS = main.cpp Harl.cpp
 OBJS = $(SRCS:.cpp=.o)
 CXX = clang++
