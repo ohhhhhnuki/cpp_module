@@ -27,5 +27,7 @@ int main(int argc, char **argv) {
 		case 4:
 			harl.error();
 			break;
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
 }
