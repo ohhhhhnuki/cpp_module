@@ -13,12 +13,11 @@ private:
 	static int fractionalBits;
 
 public:
-	Fixed();
-	~Fixed();
-	Fixed(const Fixed& fixed);
-	Fixed &operator=(const Fixed &other);
+	Fixed();//constructor
+	~Fixed();//destructor
+	Fixed(const Fixed& fixed);//copy constructor
+	Fixed& operator=(const Fixed& other);//代入演算子
 	int getRawBits() const;
-	void setRawBits(int const raw);
 };
 
 

@@ -5,8 +5,10 @@
 
 int main() {
 	Fixed a;
+	std::cout << "-------separator-------" << std::endl;
 	Fixed b( a );
 	Fixed c;
+	std::cout << "-------separator-------" << std::endl;
 	c = b;
 
 	std::cout << a.getRawBits() << std::endl;
