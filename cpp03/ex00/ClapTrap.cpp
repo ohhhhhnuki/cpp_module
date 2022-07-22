@@ -56,3 +56,4 @@ void ClapTrap::beRepaired(unsigned int amount) {
 	hitPoint += amount;
 	energyPoint--;
 }
+

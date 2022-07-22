@@ -9,4 +9,6 @@ int main() {
 	scavTrap.guardGate();
 	scavTrap.takeDamage(30);
 	scavTrap.beRepaired(50);
+	scavTrap.attack("target");
+	scavTrap.guardGate();
 }
