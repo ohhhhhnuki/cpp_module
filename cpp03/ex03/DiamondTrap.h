@@ -5,18 +5,13 @@
 #ifndef CPP_MODULE_DIAMONDTRAP_H
 #define CPP_MODULE_DIAMONDTRAP_H
 
-#include "ScavTrap.h"
-#include "FragTrap.h"
-#include "ClapTrap.h"
+#include "../ex00/ClapTrap.h"
+#include "../ex01/ScavTrap.h"
+#include "../ex02/FragTrap.h"
 
-class DiamondTrap : public ScavTrap, public FragTrap{
-private:
-	std::string name;
-	int dHitPoint;
-	int dEnergyPoint;
-	int dAttackDamage;
-
+class DiamondTrap : public ScavTrap, public FragTrap {
 public:
+	DiamondTrap();
 	DiamondTrap(std::string name);
 	~DiamondTrap();
 	void whoAmI();

@@ -81,15 +81,9 @@ add_executable(CPP_Module
         cpp03/ex02/FragTrap.cpp
         cpp03/ex02/FragTrap.h
         cpp03/ex02/main.cpp
-        cpp03/ex03/ClapTrap.cpp
-        cpp03/ex03/ClapTrap.h
         cpp03/ex03/DiamondTrap.cpp
         cpp03/ex03/DiamondTrap.h
-        cpp03/ex03/FragTrap.cpp
-        cpp03/ex03/FragTrap.h
         cpp03/ex03/main.cpp
-        cpp03/ex03/ScavTrap.cpp
-        cpp03/ex03/ScavTrap.h
         cpp04/ex00/Animal.cpp
         cpp04/ex00/Animal.h
         cpp04/ex00/Cat.cpp

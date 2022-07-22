@@ -4,15 +4,15 @@
 
 #include "DiamondTrap.h"
 
-DiamondTrap::DiamondTrap(std::string name) : ScavTrap(name), FragTrap(name){
-	this->name = name;
-	this->dHitPoint = this->getHitPoint();
-	this->dEnergyPoint = this->getEnergyPoint();
-	this->dAttackDamage = this->getAttackDamage();
+DiamondTrap::DiamondTrap() {
+	std::cout << "[DiamondTrap] Default constructor called." << std::endl;
+}
+
+DiamondTrap::DiamondTrap(std::string name) : ScavTrap(name), FragTrap(name) {
 }
 
 DiamondTrap::~DiamondTrap() {
-	std::cout << "DiamondTrap destructor called." << std::endl;
+	std::cout << "[DiamondTrap] Destructor called." << std::endl;
 }
 
 void DiamondTrap::whoAmI() {
