@@ -5,9 +5,9 @@
 #include "ClapTrap.h"
 
 int main() {
-	ClapTrap clapTrap("testA");
+	ClapTrap clapTrap("test");
 
-	clapTrap.beRepaired(100);
-	clapTrap.attack("test");
+	clapTrap.attack("target");
 	clapTrap.takeDamage(10);
+	clapTrap.beRepaired(10);
 }
