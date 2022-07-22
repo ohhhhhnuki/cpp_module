@@ -5,14 +5,16 @@
 #ifndef CPP_MODULE_SCAVTRAP_H
 #define CPP_MODULE_SCAVTRAP_H
 
-#include <iostream>
 #include "ClapTrap.h"
 
-class ScavTrap : public ClapTrap{
+class ScavTrap : public ClapTrap {
 public:
-//	ScavTrap();
+	ScavTrap();
 	ScavTrap(std::string name);
+	ScavTrap(const ScavTrap& other);
+	ScavTrap& operator=(const ScavTrap& other);
 	~ScavTrap();
+
 	void guardGate();
 };
 

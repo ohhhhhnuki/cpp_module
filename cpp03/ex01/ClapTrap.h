@@ -8,20 +8,21 @@
 #include <iostream>
 
 class ClapTrap {
-private:
+protected:
 	std::string name;
 	int hitPoint;
 	int energyPoint;
 	int attackDamage;
 
 public:
+	ClapTrap();
 	ClapTrap(std::string name);
-	ClapTrap(std::string name, int hitPoint, int energyPoint, int attackDamage);
+	ClapTrap(const ClapTrap& other);
+	ClapTrap& operator=(const ClapTrap& other);
 	~ClapTrap();
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 };
-
 
 #endif //CPP_MODULE_CLAPTRAP_H
