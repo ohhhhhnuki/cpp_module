@@ -7,12 +7,11 @@
 #include "Dog.h"
 
 int main() {
-	const Animal* j = new Dog(new Brain);
-	const Animal* i = new Cat(new Brain);
-	const Animal* k = new Animal();
+//	const Animal *i = new Animal();
+	const Animal *j = new Dog();
 
+//	delete i;
 	delete j;
-	delete i;
 
 	return (0);
 }

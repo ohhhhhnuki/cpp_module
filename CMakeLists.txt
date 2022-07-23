@@ -100,15 +100,6 @@ add_executable(CPP_Module
         cpp04/ex01/Dog.cpp
         cpp04/ex01/Dog.h
         cpp04/ex01/main.cpp
-        cpp04/ex02/Animal.cpp
-        cpp04/ex02/Animal.h
-        cpp04/ex02/Brain.cpp
-        cpp04/ex02/Brain.h
-        cpp04/ex02/Cat.cpp
-        cpp04/ex02/Cat.h
-        cpp04/ex02/Dog.cpp
-        cpp04/ex02/Dog.h
-        cpp04/ex02/main.cpp
         cpp04/ex03/AMateria.cpp
         cpp04/ex03/AMateria.h
         cpp04/ex03/Character.cpp
