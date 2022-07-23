@@ -1,7 +1,6 @@
 //
 // Created by 大貫　弘貴 on 2022/07/01.
 //
-#include  <iostream>
 #include "Animal.h"
 #include "Dog.h"
 #include "Cat.h"
@@ -16,6 +15,10 @@ int main() {
 	i->makeSound();
 	j->makeSound();
 	meta->makeSound();
+
+	delete meta;
+	delete i;
+	delete j;
 
 	return (0);
 }

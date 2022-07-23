@@ -15,10 +15,11 @@ protected:
 public:
 	Animal(std::string type);
 	Animal();
-//	Animal(Animal const &other);
-//	Animal operator=(Animal const &other);
+	Animal(Animal const &other);
+	Animal& operator=(Animal const &other);
 	~Animal();
-	std::string getType() const;
+	const std::string &getType() const;
+
 	void makeSound() const;
 };
 

@@ -4,42 +4,41 @@
 
 #include "Animal.h"
 
-Animal::Animal(std::string type) {
-	std::cout << "Animal default constructor called." << std::endl;
-	this->type = type;
+Animal::Animal(std::string type) : type(type) {
+	std::cout << "[Animal] Constructor called." << std::endl;
 }
 
 Animal::Animal() {
-	std::cout << "Aniaml true default constructor called." << std::endl;
+	std::cout << "[Animal] Default constructor called." << std::endl;
 }
 
-//Animal::Animal(Animal const &other)
-//{
-//	std::cout << "Animal: Copy Constructor" << std::endl;
-//	*this = other;
-//}
-//
-//Animal &Animal::operator=(Animal const &other)
-//{
-//	if (this != &other)
-//		this->type = other.type;
-//	std::cout << "Animal: Assinataion Operator" << std::endl;
-//	return *this;
-//}
+Animal::Animal(Animal const &other)
+{
+	std::cout << "[Animal] Copy Constructor called." << std::endl;
+	*this = other;
+}
+
+Animal& Animal::operator=(Animal const &other)
+{
+	std::cout << "[Animal] Copy assignment operator called." << std::endl;
+	if (this != &other)
+		this->type = other.type;
+	return *this;
+}
 
 Animal::~Animal() {
-	std::cout << "Animal destructor called." << std::endl;
+	std::cout << "[Animal] Destructor called." << std::endl;
 }
 
-std::string Animal::getType() const{
+const std::string &Animal::getType() const {
 	return type;
 }
 
 void Animal::makeSound() const{
 	if (type == "Dog")
-		std::cout << "one!!!" << std::endl;
+		std::cout << "bowwow bowwow" << std::endl;
 	else if (type == "Cat")
-		std::cout << "nya-!!!" << std::endl;
+		std::cout << "mew mew" << std::endl;
 	else
 		std::cout << "???????" <<std::endl;
 }

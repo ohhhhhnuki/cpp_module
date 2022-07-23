@@ -43,3 +43,4 @@ void Animal::makeSound() const{
 	else
 		std::cout << "???????" <<std::endl;
 }
+
