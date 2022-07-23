@@ -17,10 +17,10 @@ public:
 	Animal();
 	Animal(Animal const &other);
 	Animal& operator=(Animal const &other);
-	~Animal();
+	virtual ~Animal();
 	const std::string &getType() const;
 
-	void makeSound() const;
+	virtual void makeSound() const;
 };
 
 
