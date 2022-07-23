@@ -10,13 +10,17 @@
 
 class Dog : public Animal{
 private:
-	Brain* brain;
+	Brain *brain;
 
 public:
 	Dog();
-	Dog(Brain* brain);
+	Dog(const Dog &other);
+	Dog& operator=(const Dog &other);
 	~Dog();
+
+	void makeSound() const;
 };
+
 
 
 #endif //CPP_MODULE_DOG_H

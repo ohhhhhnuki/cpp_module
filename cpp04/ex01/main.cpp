@@ -7,11 +7,21 @@
 #include "Dog.h"
 
 int main() {
-	const Animal* j = new Dog(new Brain);
-	const Animal* i = new Cat(new Brain);
+	const Animal* i = new Dog();
+	const Animal* j = new Cat();
+	const Animal* k = new Dog();
+	const Animal* l = new Dog();
+	const Animal* m = new Cat();
 
-	delete j;
+	Animal animalList[] = {*i, *j, *k, *l, *m};
+	for (int index = 0; index < 5; index++)
+		animalList[index].makeSound();
+
 	delete i;
+	delete j;
+	delete k;
+	delete l;
+	delete m;
 
 	return (0);
 }

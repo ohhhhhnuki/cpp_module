@@ -4,15 +4,27 @@
 
 #include "Cat.h"
 
-Cat::Cat() : Animal("Dog"){
-	std::cout << "Cat default constructor called." << std::endl;
+Cat::Cat() : Animal("Cat"), brain(new Brain()) {
+	std::cout << "[Cat] Default constructor called." << std::endl;
 }
 
-Cat::Cat(Brain* brain) {
-	std::cout << "Cat brain constructor called." << std::endl;
-	this->brain = brain;
+Cat::Cat(const Cat &other) {
+	std::cout << "[Cat] Copy constructor called." << std::endl;
+	*this = other;
+}
+
+Cat& Cat::operator=(const Cat &other) {
+	std::cout << "[Cat] Copy assignment operator called." << std::endl;
+	if (this != &other)
+		this->type = other.type;
+	return *this;
 }
 
 Cat::~Cat() {
-	std::cout << "Cat destructor called." << std::endl;
+	std::cout << "[Cat] Destructor called." << std::endl;
+	delete this->brain;
+}
+
+void Cat::makeSound() const {
+	std::cout << "type : " << type << " mew mew!" << std::endl;
 }

@@ -14,7 +14,6 @@ private:
 public:
 	Brain();
 	~Brain();
-	std::string* getIdea();
 };
 
 #endif //CPP_MODULE_BRAIN_H
