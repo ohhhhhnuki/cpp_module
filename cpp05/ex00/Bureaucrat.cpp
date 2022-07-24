@@ -5,7 +5,7 @@
 #include "Bureaucrat.h"
 
 Bureaucrat::Bureaucrat() {
-	std::cout << "Bureaucrat default constructor called." << std::endl;
+	std::cout << "[Bureaucrat] Default constructor called." << std::endl;
 }
 
 Bureaucrat::Bureaucrat(std::string name, int grade) {
@@ -17,8 +17,22 @@ Bureaucrat::Bureaucrat(std::string name, int grade) {
 	this->grade = grade;
 }
 
+Bureaucrat::Bureaucrat(const Bureaucrat& other) {
+	std::cout << "[Bureaucrat] Copy Constructor called." << std::endl;
+	*this = other;
+}
+
+Bureaucrat& Bureaucrat::operator=(const Bureaucrat &other) {
+	std::cout << "[Bureaucrat] Copy assignment operator called." << std::endl;
+	if (this != &other) {
+		this->name = other.name;
+		this->grade = other.grade;
+	}
+	return *this;
+}
+
 Bureaucrat::~Bureaucrat() {
-	std::cout << "Bureaucrat destructor called." << std::endl;
+	std::cout << "[Bureaucrat] Destructor called." << std::endl;
 }
 
 std::string Bureaucrat::getName() {
