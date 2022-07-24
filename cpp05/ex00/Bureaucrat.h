@@ -16,19 +16,17 @@ public:
 	Bureaucrat();
 	Bureaucrat(std::string name, int grade);
 	Bureaucrat(const Bureaucrat& other);
-	Bureaucrat& operator=(const Bureaucrat& other);
+	Bureaucrat& operator=(const Bureaucrat &other);
+
 	~Bureaucrat();
-	std::string getName();
-	int getGrade();
+
+	const std::string &getName() const;
+	int getGrade() const;
 };
 
-class GradeTooHighException : public std::exception {
-
-};
-
-class GradeTooLowException : public std::exception {
-
-};
+std::ostream& operator<<(std::ostream &os, const Bureaucrat &bureaucrat);
+class GradeTooHighException : public std::exception {};
+class GradeTooLowException : public std::exception {};
 
 
 #endif //CPP_MODULE_BUREAUCRAT_H

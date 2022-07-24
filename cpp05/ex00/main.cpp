@@ -7,13 +7,26 @@
 
 int main() {
 	try {
-		Bureaucrat test1("test1", 100);
-		Bureaucrat test2("test2", 160);
+		while (true) {
+			std::string bureaucratName;
+			int bureaucratGrade;
+
+			std::cout << std::endl << "Let`s create Bureaucrat!!" << std::endl;
+
+			std::cout << "input Bureaucrat name > ";
+			std::cin >> bureaucratName;
+
+			std::cout << "input Bureaucrat grade > ";
+			std::cin >> bureaucratGrade;
+
+			Bureaucrat bureaucrat(bureaucratName, bureaucratGrade);
+			std::cout << bureaucrat << std::endl;
+		}
 	} catch (GradeTooHighException* e) {
-		e->what();
+		std::cerr << "grade is too high! " << e->what() << std::endl;
 	} catch (GradeTooLowException* e) {
-		e->what();
+		std::cerr << "grade is too low! " << e->what() << std::endl;
 	} catch (std::exception e) {
-		e.what();
+		std::cerr << "something wrong! " << e.what() << std::endl;
 	}
 }

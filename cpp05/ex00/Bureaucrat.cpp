@@ -8,13 +8,12 @@ Bureaucrat::Bureaucrat() {
 	std::cout << "[Bureaucrat] Default constructor called." << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string name, int grade) {
+Bureaucrat::Bureaucrat(std::string name, int grade) : name(name), grade(grade) {
+	std::cout << "[Bureaucrat] Constructor called." << std::endl;
 	if (grade > 150)
 		throw new GradeTooHighException;
 	else if (grade < 1)
 		throw new GradeTooLowException;
-	this->name = name;
-	this->grade = grade;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat& other) {
@@ -31,14 +30,20 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat &other) {
 	return *this;
 }
 
+std::ostream& operator<<(std::ostream &os, const Bureaucrat &bureaucrat) {
+	os << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade();
+	return os;
+}
+
 Bureaucrat::~Bureaucrat() {
 	std::cout << "[Bureaucrat] Destructor called." << std::endl;
 }
 
-std::string Bureaucrat::getName() {
-	return this->name;
+const std::string &Bureaucrat::getName() const {
+	return name;
 }
 
-int Bureaucrat::getGrade() {
-	return this->grade;
+int Bureaucrat::getGrade() const {
+	return grade;
 }
+
