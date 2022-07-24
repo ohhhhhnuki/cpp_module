@@ -14,20 +14,22 @@ class Form {
 private:
 	std::string name;
 	bool isSigned;
-	int signableScore;
-	int executableScore;
+	int signableGrade;
+	int executableGrade;
 
 public:
-	Form(std::string name, int const signableScore, int const executableScore);
+	Form(std::string name, int const signableGrade, int const executableGrade);
 	~Form();
+	Form(const Form& other);
 	Form &operator=(Form const &other);
-	friend std::ostream &operator<<(std::ostream &os, const Form &form);
-
 	const std::string &getName() const;
-	int getSignableScore() const;
-	int getExecutableScore() const;
+	int getSignableGrade() const;
+	int getExecutableGrade() const;
+	bool getIsSigned() const;
 
 	void beSigned(Bureaucrat bureaucrat);
 };
+
+std::ostream &operator<<(std::ostream &os, const Form &form);
 
 #endif //CPP_MODULE_FORM_H

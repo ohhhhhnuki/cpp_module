@@ -17,14 +17,17 @@ private:
 public:
 	Bureaucrat();
 	Bureaucrat(std::string name, int grade);
+	Bureaucrat(const Bureaucrat& other);
+	Bureaucrat& operator=(const Bureaucrat &other);
 	~Bureaucrat();
-	std::string getName();
-	int getGrade();
+	const std::string &getName() const;
+	int getGrade() const;
+
 	void signForm(Form form);
 };
 
+std::ostream& operator<<(std::ostream &os, const Bureaucrat &bureaucrat);
 class GradeTooHighException : public std::exception {};
-
 class GradeTooLowException : public std::exception {};
 
 

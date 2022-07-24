@@ -18,7 +18,7 @@ private:
 	int executableScore;
 
 public:
-	Form(std::string name, int const signableScore, int const executableScore);
+	Form(std::string name, int const signableScore, int const executableGrade);
 	~Form();
 	Form &operator=(Form const &other);
 	friend std::ostream &operator<<(std::ostream &os, const Form &form);
