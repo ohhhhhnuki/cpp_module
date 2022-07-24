@@ -7,9 +7,9 @@
 Form::Form(std::string name, int const signableGrade, int const executableGrade) : name(name), isSigned(false), signableGrade(signableGrade), executableGrade(executableGrade) {
 	std::cout << "[Form] Constructor called." << std::endl;
 	if (signableGrade < 1 || executableGrade < 1)
-		throw new GradeTooHighException;
+		throw GradeTooHighException();
 	else if (signableGrade > 150 || executableGrade > 150)
-		throw new GradeTooLowException;
+		throw GradeTooLowException();
 }
 
 Form::~Form() {
@@ -57,6 +57,6 @@ bool Form::getIsSigned() const {
 void Form::beSigned(Bureaucrat bureaucrat)
 {
 	if (this->signableGrade < bureaucrat.getGrade())
-		throw new GradeTooLowException();
+		throw GradeTooLowException();
 	this->isSigned = true;
 }

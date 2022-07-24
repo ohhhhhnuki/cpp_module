@@ -7,4 +7,12 @@
 int main() {
 	Form form("form", 100, 30);
 	Bureaucrat bureaucrat("bureaucrat" , 20);
+
+	bureaucrat.signForm(form);
+
+	Form testForm("test", 50, 20);
+	Bureaucrat testBureaucrat("test", 60);
+
+	testBureaucrat.signForm(testForm);
+	testForm.beSigned(bureaucrat);
 }
