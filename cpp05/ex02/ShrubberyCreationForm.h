@@ -9,12 +9,11 @@
 #include "Form.h"
 
 class ShrubberyCreationForm : public Form {
-private:
-	int sSignableGrade;
-	int sExecutableGrade;
-
 public:
+	ShrubberyCreationForm();
 	ShrubberyCreationForm(std::string target);
+	ShrubberyCreationForm(const ShrubberyCreationForm& other);
+	ShrubberyCreationForm& operator=(const ShrubberyCreationForm& other);
 	~ShrubberyCreationForm();
 	void execute(Bureaucrat const & executor) const;
 };
