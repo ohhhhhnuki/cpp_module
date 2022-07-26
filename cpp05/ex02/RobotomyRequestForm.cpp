@@ -4,18 +4,33 @@
 
 #include "RobotomyRequestForm.h"
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form(target, 72, 45){
-	std::cout << "RobotomyRequestForm constructor called." << std::endl;
-	this->rSignableScore = 72;
-	this->rExecutableScore = 45;
+RobotomyRequestForm::RobotomyRequestForm() : Form("default", 72, 45) {
+	std::cout << "[RobotomyRequestForm] Default Constructor called." << std::endl;
 }
 
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form(target, 72, 45){
+	std::cout << "[RobotomyRequestForm] Constructor called." << std::endl;
+}
+
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other) : Form(other) {
+	std::cout << "[RobotomyRequestForm] Copy Constructor called." << std::endl;
+	*this = other;
+}
+
+RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& other) {
+	std::cout << "[RobotomyRequestForm] Copy assignment operator called." << std::endl;
+	this->Form::operator=(other);
+	return *this;
+}
+
+
 RobotomyRequestForm::~RobotomyRequestForm() {
-	std::cout << "RobotomyRequestForm destructor called." << std::endl;
+	std::cout << "[RobotomyRequestForm] Destructor called." << std::endl;
 }
 
 void RobotomyRequestForm::execute(const Bureaucrat &executor) const {
-	(void)executor;
+	if (executor.getGrade() > this->getExecutableGrade())
+		throw GradeTooLowException();
 
 	std::cout << "Gaaaaaaaaaaaa..." << std::endl;
 

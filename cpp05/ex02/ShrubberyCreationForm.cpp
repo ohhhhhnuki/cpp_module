@@ -28,8 +28,6 @@ ShrubberyCreationForm::~ShrubberyCreationForm() {
 }
 
 void ShrubberyCreationForm::execute(const Bureaucrat &executor) const {
-	(void)executor;
-
 	if (executor.getGrade() > this->getExecutableGrade())
 		throw GradeTooLowException();
 	try {

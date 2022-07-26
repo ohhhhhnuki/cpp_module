@@ -8,7 +8,7 @@
 #include "ShrubberyCreationForm.h"
 
 int main() {
-	Bureaucrat bureaucrat("test", 50);
+	Bureaucrat bureaucrat("test", 40);
 
 	PresidentialPardonForm presidentialPardonForm("test");
 	RobotomyRequestForm robotomyRequestForm("test");
@@ -17,4 +17,5 @@ int main() {
 	std::cout << "------------------------------------" << std::endl;
 
 	shrubberyCreationForm.execute(bureaucrat);
+	robotomyRequestForm.execute(bureaucrat);
 }
