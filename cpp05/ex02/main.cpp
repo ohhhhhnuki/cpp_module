@@ -20,4 +20,7 @@ int main() {
 	shrubberyCreationForm.execute(bureaucrat);
 	robotomyRequestForm.execute(bureaucrat);
 	presidentialPardonForm.execute(bureaucratTest);
+
+	bureaucrat.executeForm(robotomyRequestForm);
+	bureaucrat.executeForm(presidentialPardonForm);
 }

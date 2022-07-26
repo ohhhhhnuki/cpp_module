@@ -47,7 +47,6 @@ int Bureaucrat::getGrade() const {
 	return grade;
 }
 
-
 void Bureaucrat::signForm(Form form) {
 	try {
 		form.beSigned(*this);
@@ -56,5 +55,14 @@ void Bureaucrat::signForm(Form form) {
 		std::cout << this->name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
 	} catch (std::exception e) {
 		std::cout << "something wrong!" << std::endl;
+	}
+}
+
+void Bureaucrat::executeForm(Form const& form) {
+	try {
+		form.execute(*this);
+		std::cout << this->getName() << " executed " << form.getName() << std::endl;
+	} catch (GradeTooLowException e) {
+		std::cout << "execute is failure..." << std::endl;
 	}
 }

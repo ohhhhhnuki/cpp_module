@@ -24,6 +24,7 @@ public:
 	int getGrade() const;
 
 	void signForm(Form form);
+	void executeForm(Form const& form);
 };
 
 std::ostream& operator<<(std::ostream &os, const Bureaucrat &bureaucrat);
