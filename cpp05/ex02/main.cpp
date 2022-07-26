@@ -9,6 +9,7 @@
 
 int main() {
 	Bureaucrat bureaucrat("test", 40);
+	Bureaucrat bureaucratTest("test", 2);
 
 	PresidentialPardonForm presidentialPardonForm("test");
 	RobotomyRequestForm robotomyRequestForm("test");
@@ -18,4 +19,5 @@ int main() {
 
 	shrubberyCreationForm.execute(bureaucrat);
 	robotomyRequestForm.execute(bureaucrat);
+	presidentialPardonForm.execute(bureaucratTest);
 }
