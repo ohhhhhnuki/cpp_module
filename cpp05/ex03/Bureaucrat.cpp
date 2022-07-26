@@ -1,35 +1,68 @@
 //
 // Created by 大貫　弘貴 on 2022/07/04.
 //
-
 #include "Bureaucrat.h"
 #include "Form.h"
 
 Bureaucrat::Bureaucrat() {
-	std::cout << "Bureaucrat default constructor called." << std::endl;
+	std::cout << "[Bureaucrat] Default constructor called." << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string name, int grade) {
-	if (grade > 150)
+Bureaucrat::Bureaucrat(std::string name, int grade) : name(name), grade(grade) {
+	std::cout << "[Bureaucrat] Constructor called." << std::endl;
+	if (grade < 1)
 		throw new GradeTooHighException;
-	else if (grade < 1)
+	else if (grade > 150)
 		throw new GradeTooLowException;
-	this->name = name;
-	this->grade = grade;
+}
+
+Bureaucrat::Bureaucrat(const Bureaucrat& other) {
+	std::cout << "[Bureaucrat] Copy Constructor called." << std::endl;
+	*this = other;
+}
+
+Bureaucrat& Bureaucrat::operator=(const Bureaucrat &other) {
+	std::cout << "[Bureaucrat] Copy assignment operator called." << std::endl;
+	if (this != &other) {
+		this->name = other.name;
+		this->grade = other.grade;
+	}
+	return *this;
+}
+
+std::ostream& operator<<(std::ostream &os, const Bureaucrat &bureaucrat) {
+	os << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade();
+	return os;
 }
 
 Bureaucrat::~Bureaucrat() {
-	std::cout << "Bureaucrat destructor called." << std::endl;
+	std::cout << "[Bureaucrat] Destructor called." << std::endl;
 }
 
-std::string Bureaucrat::getName() {
-	return this->name;
+const std::string &Bureaucrat::getName() const {
+	return name;
 }
 
-int Bureaucrat::getGrade() {
-	return this->grade;
+int Bureaucrat::getGrade() const {
+	return grade;
 }
 
 void Bureaucrat::signForm(Form form) {
-	std::cout << this->name << " signed " << form.getName() << std::endl;
+	try {
+		form.beSigned(*this);
+		std::cout << this->name << " signed " << form.getName() << std::endl;
+	} catch (GradeTooLowException e) {
+		std::cout << this->name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+	} catch (std::exception e) {
+		std::cout << "something wrong!" << std::endl;
+	}
+}
+
+void Bureaucrat::executeForm(Form const& form) {
+	try {
+		form.execute(*this);
+		std::cout << this->getName() << " executed " << form.getName() << std::endl;
+	} catch (GradeTooLowException e) {
+		std::cout << "execute is failure..." << std::endl;
+	}
 }

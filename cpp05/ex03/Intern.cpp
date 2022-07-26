@@ -3,20 +3,36 @@
 //
 
 #include "Intern.h"
-#include "RobotomyRequestForm.h"
 
 Intern::Intern() {
-	std::cout << "Intern constructor called." << std::endl;
+	std::cout << "[Intern] Default Constructor called." << std::endl;
+}
+
+Intern::Intern(const Intern& other) {
+	std::cout << "[Intern] Copy Constructor called." << std::endl;
+	*this = other;
+}
+
+Intern& Intern::operator=(const Intern& other) {
+	std::cout << "[Intern] Copy assignment operator called." << std::endl;
+	return *this;
 }
 
 Intern::~Intern() {
-	std::cout << "Intern destructor called." << std::endl;
+	std::cout << "[Intern] Destructor called." << std::endl;
 }
 
 Form* Intern::makeForm(std::string formName, std::string formTarget) {
 	std::cout << "Intern creates " << formName << " form" << std::endl;
 
-	if (formName == "robotome request")
-		RobotomyRequestForm(formTarget);
-	//他はまだ書いてない。
+	if (formName == "robotomy")
+		return new RobotomyRequestForm(formTarget);
+	else if (formName == "President")
+		return new PresidentialPardonForm(formTarget);
+	else if (formName == "Shrubbery")
+		return new ShrubberyCreationForm(formTarget);
+	else {
+		std::cout << "formName don`t exist." << std::endl;
+		return NULL;
+	}
 }

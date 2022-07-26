@@ -10,12 +10,11 @@
 #include "Form.h"
 
 class RobotomyRequestForm : public Form{
-private:
-	int rSignableScore;
-	int rExecutableScore;
-
 public:
+	RobotomyRequestForm();
 	RobotomyRequestForm(std::string target);
+	RobotomyRequestForm(const RobotomyRequestForm& other);
+	RobotomyRequestForm& operator=(const RobotomyRequestForm& other);
 	~RobotomyRequestForm();
 	void execute(Bureaucrat const & executor) const;
 };

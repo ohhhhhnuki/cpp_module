@@ -7,10 +7,15 @@
 
 #include <iostream>
 #include "Form.h"
+#include "RobotomyRequestForm.h"
+#include "PresidentialPardonForm.h"
+#include "ShrubberyCreationForm.h"
 
 class Intern {
 public:
 	Intern();
+	Intern(const Intern& other);
+	Intern& operator=(const Intern& other);
 	~Intern();
 	Form* makeForm(std::string formName, std::string formTarget);
 };

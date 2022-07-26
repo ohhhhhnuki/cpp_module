@@ -132,15 +132,9 @@ add_executable(CPP_Module
         cpp05/ex02/RobotomyRequestForm.h
         cpp05/ex02/ShrubberyCreationForm.cpp
         cpp05/ex02/ShrubberyCreationForm.h
-        cpp05/ex03/Bureaucrat.cpp
-        cpp05/ex03/Bureaucrat.h
-        cpp05/ex03/Form.cpp
-        cpp05/ex03/Form.h
         cpp05/ex03/Intern.cpp
         cpp05/ex03/Intern.h
         cpp05/ex03/main.cpp
-        cpp05/ex03/RobotomyRequestForm.cpp
-        cpp05/ex03/RobotomyRequestForm.h
         cpp06/ex00/main.cpp
         cpp06/ex01/Data.cpp
         cpp06/ex01/Data.h

@@ -6,7 +6,9 @@
 
 int main() {
 	Intern someRandomIntern;
+	Bureaucrat bureaucrat("test", 4);
 	Form* rrf;
 
-	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	rrf = someRandomIntern.makeForm("robotomy", "Bender");
+	rrf->execute(bureaucrat);
 }
