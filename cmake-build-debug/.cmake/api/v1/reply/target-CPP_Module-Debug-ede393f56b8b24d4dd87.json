@@ -369,24 +369,21 @@
 				100,
 				102,
 				104,
+				105,
 				106,
 				108,
-				109,
 				111,
-				112,
 				114,
+				115,
 				117,
-				120,
+				119,
 				121,
-				123,
-				125,
+				122,
+				124,
+				126,
 				127,
 				128,
-				130,
-				132,
-				133,
-				134,
-				136
+				130
 			]
 		}
 	],
@@ -482,24 +479,21 @@
 				100,
 				102,
 				104,
+				105,
 				106,
 				108,
-				109,
 				111,
-				112,
 				114,
+				115,
 				117,
-				120,
+				119,
 				121,
-				123,
-				125,
+				122,
+				124,
+				126,
 				127,
 				128,
-				130,
-				132,
-				133,
-				134,
-				136
+				130
 			]
 		},
 		{
@@ -548,21 +542,18 @@
 				99,
 				101,
 				103,
-				105,
 				107,
+				109,
 				110,
+				112,
 				113,
-				115,
 				116,
 				118,
-				119,
-				122,
-				124,
-				126,
+				120,
+				123,
+				125,
 				129,
-				131,
-				135,
-				137
+				131
 			]
 		}
 	],
@@ -1142,28 +1133,6 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "cpp05/ex03/Bureaucrat.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "cpp05/ex03/Bureaucrat.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "cpp05/ex03/Form.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "cpp05/ex03/Form.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "cpp05/ex03/Intern.cpp",
 			"sourceGroupIndex" : 0
 		},
@@ -1177,17 +1146,6 @@
 			"compileGroupIndex" : 0,
 			"path" : "cpp05/ex03/main.cpp",
 			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "cpp05/ex03/RobotomyRequestForm.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "cpp05/ex03/RobotomyRequestForm.h",
-			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,

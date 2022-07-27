@@ -2,7 +2,7 @@
 // Created by 大貫　弘貴 on 2022/07/06.
 //
 #include "Intern.h"
-#include "Form.h"
+#include "Bureaucrat.h"
 
 int main() {
 	Intern someRandomIntern;

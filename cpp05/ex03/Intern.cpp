@@ -15,6 +15,7 @@ Intern::Intern(const Intern& other) {
 
 Intern& Intern::operator=(const Intern& other) {
 	std::cout << "[Intern] Copy assignment operator called." << std::endl;
+	(void)other;
 	return *this;
 }
 
@@ -24,15 +25,15 @@ Intern::~Intern() {
 
 Form* Intern::makeForm(std::string formName, std::string formTarget) {
 	std::cout << "Intern creates " << formName << " form" << std::endl;
+	int formIndex = (formName == "robotomy") * 1 + (formName == "President") * 2 + (formName == "Shrubbery") * 3;
 
-	if (formName == "robotomy")
-		return new RobotomyRequestForm(formTarget);
-	else if (formName == "President")
-		return new PresidentialPardonForm(formTarget);
-	else if (formName == "Shrubbery")
-		return new ShrubberyCreationForm(formTarget);
-	else {
-		std::cout << "formName don`t exist." << std::endl;
-		return NULL;
+	switch (formIndex) {
+		case 1 : return new RobotomyRequestForm(formTarget);
+		case 2 : return new PresidentialPardonForm(formTarget);
+		case 3 : return new ShrubberyCreationForm(formTarget);
+		default : {
+			std::cout << "formName don`t exists." << std::endl;
+			return NULL;
+		}
 	}
 }

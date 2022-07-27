@@ -1,5 +1,5 @@
 NAME = ex03
-SRCS = main.cpp Intern.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
+SRCS = main.cpp Intern.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Bureaucrat.cpp
 OBJS = $(SRCS:.cpp=.o)
 CXX = clang++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
