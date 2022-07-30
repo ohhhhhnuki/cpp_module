@@ -36,8 +36,8 @@ public:
 	};
 	Converter() {}
 	Converter(const std::string &str = "");
-	Converter(const Converter& other);
-	Converter& operator=(const Converter& other);
+//	Converter(const Converter& other);
+//	Converter& operator=(const Converter& other);
 	virtual ~Converter() {}
 
 	void detectType();
@@ -74,14 +74,6 @@ public:
 
 };
 
-std::ostream &operator<<(std::ostream &ost, const Converter &rhs) {
-	ost << "char: " << rhs.getCstr() << "\n";
-	ost << "int: " << rhs.getIstr() << "\n";
-	ost << "float: " << rhs.getFstr() << "\n";
-	ost << "double: " << rhs.getDstr() << "\n";
-
-	return ost;
-}
-
+std::ostream &operator<<(std::ostream &ost, const Converter &rhs);
 
 #endif //CPP_MODULE_CONVERTER_H

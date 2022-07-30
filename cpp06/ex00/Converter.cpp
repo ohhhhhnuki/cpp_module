@@ -55,6 +55,20 @@ bool Converter::isFloat() {
 		return true;
 }
 
+bool Converter::isDouble() {
+	if (this->isInt())
+		return false;
+	const char *p = str.c_str();
+	char *end;
+	errno = 0;
+	std::strtod(p, &end);
+
+	if (p == end || *end || errno == ERANGE || str == "+nan" || str == "-nan")
+		return false;
+	else
+		return true;
+}
+
 void Converter::detectType() {
 	if (this->isChar())
 		valueType = CHAR;
@@ -104,15 +118,16 @@ void Converter::setValuesFromInt() {
 	d = static_cast<double>(i);
 }
 
-void Converter::setStrsFromFloat() {
+void Converter::setValuesFromFloat() {
 	char *end;
+	f = std::strtof(str.c_str(), &end);
 
 	c = static_cast<char>(f);
 	i = static_cast<int>(f);
 	d = static_cast<double>(f);
 }
 
-void Converter::setStrsFromDouble() {
+void Converter::setValuesFromDouble() {
 	char *end;
 	d = std::strtod(str.c_str(), &end);
 
@@ -138,4 +153,136 @@ void Converter::setStrs() {
 		default:
 			setStrsError();
 	}
+}
+
+void Converter::setStrsFromChar() {
+	std::ostringstream oss;
+
+	oss << '\'' << c << '\'';
+	cStr = oss.str();
+	oss.str("");
+	oss.clear();
+
+	oss << i;
+	iStr = oss.str();
+	oss.str("");
+	oss.clear();
+
+	oss << i << ".0";
+	dStr = oss.str();
+}
+
+void Converter::setStrsFromInt() {
+	std::ostringstream oss;
+
+	if ((i >= 0 && i <= 31) || i == 127)
+		oss << "Non desplayable";
+	else if (i >= 32 && i <= 126)
+		oss << '\'' << c << '\'';
+	else
+		oss << "impossible";
+	cStr = oss.str();
+	oss.str("");
+	oss.clear();
+
+	oss << i;
+	iStr = oss.str();
+	oss.str("");
+	oss.clear();
+
+	oss << i << ".0f";
+	fStr = oss.str();
+	oss.str("");
+	oss.clear();
+
+	oss << i << ".0";
+	dStr = oss.str();
+}
+
+void Converter::setStrsFromFloat() {
+	std::ostringstream oss;
+
+	if ((i >= 0 && i <= 31) || i == 127)
+		oss << "Non desplayable";
+	else if (i >= 32 && i <= 126)
+		oss << '\'' << c << '\'';
+	else
+		oss << "impossible";
+	cStr = oss.str();
+	oss.str("");
+	oss.clear();
+
+	if (static_cast<long>(f) <= INT_MIN || static_cast<long>(f) >= INT_MAX)
+		oss << "impossible";
+	else
+		oss << i;
+	iStr = oss.str();
+	oss.str("");
+	oss.clear();
+
+	if (i == f)
+		oss << i << ".0f";
+	else
+		oss << f << "f";
+	fStr = oss.str();
+	oss.str("");
+	oss.clear();
+
+	if (i == d)
+		oss << i << ".0";
+	else
+		oss << d;
+	dStr = oss.str();
+}
+
+void Converter::setStrsFromDouble() {
+	std::ostringstream oss;
+
+	if ((i >= 0 && i <= 31) || i == 127)
+		oss << "Non desplayable";
+	else if (i >= 32 && i <= 126)
+		oss << '\'' << c << '\'';
+	else
+		oss << "impossible";
+	cStr = oss.str();
+	oss.str("");
+	oss.clear();
+
+	if (static_cast<long>(d) <= INT_MIN || static_cast<long>(d) >= INT_MAX)
+		oss << "impossible";
+	else
+		oss << i;
+	iStr = oss.str();
+	oss.str("");
+	oss.clear();
+
+	if (i == f)
+		oss << i << ".0f";
+	else
+		oss << f << "f";
+	fStr = oss.str();
+	oss.str("");
+	oss.clear();
+
+	if (i == d)
+		oss << i << ".0";
+	else
+		oss << d;
+	dStr = oss.str();
+}
+
+void Converter::setStrsError() {
+	cStr = "impossible";
+	iStr = "impossible";
+	fStr = "impossible";
+	dStr = "impossible";
+}
+
+std::ostream &operator<<(std::ostream &ost, const Converter &rhs) {
+	ost << "char: " << rhs.getCstr() << "\n";
+	ost << "int: " << rhs.getIstr() << "\n";
+	ost << "float: " << rhs.getFstr() << "\n";
+	ost << "double: " << rhs.getDstr() << "\n";
+
+	return ost;
 }

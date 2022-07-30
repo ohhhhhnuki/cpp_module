@@ -1,5 +1,5 @@
 NAME = convert
-SRCS = main.cpp
+SRCS = main.cpp Converter.cpp
 OBJS = $(SRCS:.cpp=.o)
 CXX = clang++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
