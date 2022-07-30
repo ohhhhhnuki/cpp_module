@@ -10,7 +10,10 @@
 class B : public Base {
 public:
 	B() {
-		std::cout << "[B] default constructor called." << std::endl;
+		std::cout << "[B] Default constructor called." << std::endl;
+	}
+	~B() {
+		std::cout << "[B] Destructor called" << std::endl;
 	}
 };
 
