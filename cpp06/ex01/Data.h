@@ -13,6 +13,8 @@ private:
 public:
 	Data();
 	Data(std::string str);
+	Data(const Data& other);
+	Data& operator=(const Data &other);
 	~Data();
 
 	const std::string &getStr() const;

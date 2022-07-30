@@ -5,15 +5,27 @@
 #include "Data.h"
 
 Data::Data() {
-	std::cout << "Data default constructor called." << std::endl;
+	std::cout << "[Data] Default constructor called." << std::endl;
 }
 
 Data::Data(std::string str) : str(str){
-	std::cout << "Data constructor called." << std::endl;
+	std::cout << "[Data] Constructor called." << std::endl;
+}
+
+Data::Data(const Data &other) {
+	std::cout << "[Data] Copy constructor called." << std::endl;
+	*this = other;
+}
+
+Data& Data::operator=(const Data &other) {
+	std::cout << "[Data] Copy assignment operator called." << std::endl;
+	if (this != &other)
+		this->str = other.str;
+	return *this;
 }
 
 Data::~Data() {
-	std::cout << "Data destructor called." << std::endl;
+	std::cout << "[Data] Destructor called." << std::endl;
 }
 
 const std::string &Data::getStr() const {
