@@ -147,4 +147,4 @@ add_executable(CPP_Module
         cpp06/ex02/main.cpp
         cpp07/ex00/main.cpp
         cpp07/ex00/whatever.h
-        cpp07/ex01/main.cpp cpp07/ex01/iter.h cpp07/ex02/Array.cpp cpp07/ex02/Array.h cpp07/ex02/main.cpp cpp08/ex00/main.cpp cpp08/ex00/easyfind.h cpp08/ex01/Span.cpp cpp08/ex01/Span.h cpp08/ex01/main.cpp cpp00/ex00/megaphone.cpp cpp04/ex00/WrongAnimal.cpp cpp04/ex00/WrongAnimal.h cpp04/ex00/WrongCat.cpp cpp04/ex00/WrongCat.h cpp06/ex00/Converter.cpp cpp06/ex00/Converter.h)
+        cpp07/ex01/main.cpp cpp07/ex01/iter.h cpp07/ex02/Array.h cpp07/ex02/main.cpp cpp08/ex00/main.cpp cpp08/ex00/easyfind.h cpp08/ex01/Span.cpp cpp08/ex01/Span.h cpp08/ex01/main.cpp cpp00/ex00/megaphone.cpp cpp04/ex00/WrongAnimal.cpp cpp04/ex00/WrongAnimal.h cpp04/ex00/WrongCat.cpp cpp04/ex00/WrongCat.h cpp06/ex00/Converter.cpp cpp06/ex00/Converter.h)
